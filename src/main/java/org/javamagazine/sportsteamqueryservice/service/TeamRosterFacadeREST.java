@@ -43,6 +43,7 @@ public class TeamRosterFacadeREST  {
     }
 
     @GET
+    @Path("findAll")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public TeamRosterObjects findAll() {
         List<TeamRoster> teamList =  em.createQuery("select object(o) from TeamRoster o")
